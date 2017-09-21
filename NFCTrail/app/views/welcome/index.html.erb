@@ -1,2 +1,202 @@
-<h1>Butt Hunt</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<head>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/style.css">
+</head>
+
+<body>
+<h1>butts</h1>
+<div id="map"></div>
+
+<script>
+  function initMap() {
+    var location1 = {lat: 51.514888, lng: -0.068766};
+    var location2 = {lat: 51.518888, lng: -0.143931};
+    var location3 = {lat: 51.517346, lng: -0.12158};
+    var location4 = {lat: 51.504839, lng: -0.113924};
+    var location5 = {lat: 51.522806, lng: -0.112576};
+
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 13,
+      center: location3,
+
+      styles: [
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#ff478f"
+            },
+            {
+                "saturation": -58
+            },
+            {
+                "lightness": 83
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ff478f"
+            },
+            {
+                "lightness": 73
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.attraction",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.business",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "hue": "#3bff00"
+            },
+            {
+                "color": "#ff478f"
+            },
+            {
+                "visibility": "on"
+            },
+            {
+                "weight": 0.6
+            },
+            {
+                "lightness": 58
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "color": "#808080"
+            },
+            {
+                "hue": "#ff0000"
+            },
+            {
+                "saturation": 50
+            },
+            {
+                "lightness": -13
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#ff478f"
+            },
+            {
+                "lightness": 73
+            }
+        ]
+    }
+]
+
+
+
+
+    });
+    var marker1 = new google.maps.Marker({
+      position: location1,
+      map: map,
+    });
+
+    var marker2 = new google.maps.Marker({
+      position: location2,
+      map: map
+    });
+
+    var marker3 = new google.maps.Marker({
+      position: location3,
+      map: map
+    });
+
+    var marker4 = new google.maps.Marker({
+      position: location4,
+      map: map
+    });
+
+    var marker4 = new google.maps.Marker({
+      position: location5,
+      map: map
+    });
+
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4dv7LkOtPUwdz0bhggtgJAbmYuwUBpgs&callback=initMap"></script>
